@@ -13,6 +13,7 @@
 		A90598462545670A0005CD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90598442545670A0005CD38 /* Main.storyboard */; };
 		A90598482545670E0005CD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90598472545670E0005CD38 /* Assets.xcassets */; };
 		A905984B2545670E0005CD38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90598492545670E0005CD38 /* LaunchScreen.storyboard */; };
+		A905985B25461D140005CD38 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A905985A25461D140005CD38 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A90598472545670E0005CD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A905984A2545670E0005CD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A905984C2545670F0005CD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A905985A25461D140005CD38 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				A90598402545670A0005CD38 /* SceneDelegate.swift */,
 				A90598422545670A0005CD38 /* ViewController.swift */,
 				A90598442545670A0005CD38 /* Main.storyboard */,
+				A905985A25461D140005CD38 /* WelcomeViewController.swift */,
 				A90598472545670E0005CD38 /* Assets.xcassets */,
 				A90598492545670E0005CD38 /* LaunchScreen.storyboard */,
 				A905984C2545670F0005CD38 /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90598432545670A0005CD38 /* ViewController.swift in Sources */,
+				A905985B25461D140005CD38 /* WelcomeViewController.swift in Sources */,
 				A905983F2545670A0005CD38 /* AppDelegate.swift in Sources */,
 				A90598412545670A0005CD38 /* SceneDelegate.swift in Sources */,
 			);

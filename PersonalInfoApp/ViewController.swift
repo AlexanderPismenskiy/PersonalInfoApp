@@ -16,21 +16,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     
+    
+    @IBAction func logInButtonPressed() {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = userNameTextField.text
+    }
+    
+    
     @IBAction func userNameReminderButton() {
-        showAlertName(with: "Your User Name is", and: "Alex")
+        showAlert(with: "Your User Name is", and: "Alex")
     }
     
     @IBAction func passwordReminderButton() {
+        showAlert(with: "Your Password is", and: "12345")
     }
 }
 
 
 extension ViewController {
-    private func showAlertName(with title: String, and message: String) {
+    private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.userNameTextField.text = ""
