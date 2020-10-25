@@ -23,11 +23,31 @@ class ViewController: UIViewController {
     
     
     @IBAction func logInButtonPressed() {
+        checkUserName()
+        checkPassword()
+    }
+       
+    func checkUserName () {
+        guard let inputName = userNameTextField.text, !inputName.isEmpty else {
+            showAlert(with: "User name field is empty", and: "Please enter your user name")
+            return
+        }
+    }
+    
+    func checkPassword () {
+        guard let inputPassword = passwordTextField.text, !inputPassword.isEmpty else {
+            showAlert(with: "Password field is empty", and: "Please enter your password")
+            return
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if userNameTextField.text == "Alex" && passwordTextField.text == "123456" {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.username = userNameTextField.text
+        } else {
+            showAlert(with: "Incorrect data", and: "Please check")
+        }
     }
     
     
@@ -46,8 +66,11 @@ extension ViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.userNameTextField.text = ""
+            self.passwordTextField.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
+
+
