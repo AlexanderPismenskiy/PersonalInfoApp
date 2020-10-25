@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="48" width="240" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -45,14 +45,20 @@
                                 <rect key="frame" x="40" y="276" width="240" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUG-X5-0E1">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Forgot Password?"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-8h-T1h">
-                                        <rect key="frame" x="122" y="0.0" width="118" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Forgot User Name?"/>
+                                        <connections>
+                                            <action selector="userNameReminderButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="6i4-RR-O3E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-8h-T1h">
+                                        <rect key="frame" x="131" y="0.0" width="109" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="passwordReminderButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Bn-Ji-vWQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -69,6 +75,10 @@
                             <constraint firstItem="t8E-Zs-2zL" firstAttribute="top" secondItem="19Z-az-a5a" secondAttribute="bottom" constant="18" id="z4i-2M-2Cl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="ypq-9d-kkI" id="vRe-Ke-Zkq"/>
+                        <outlet property="userNameTextField" destination="HPR-wZ-0L0" id="Iya-aL-GS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
